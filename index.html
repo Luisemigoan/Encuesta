@@ -13,30 +13,30 @@
 
     <main>
         <header class="header">
-            <h1>Form Survey</h1>
-            <p>Please take a few minutes to answer this survey</p>
+            <h1 id="title">Form Survey</h1>
+            <p id="description">Please take a few minutes to answer this survey</p>
         </header>
 
-        <form action="#" method="post">
+        <form action="#" method="post" id="survey-form">
 
             <div class="container">
                 <fieldset>
-                    <label for="name"> Name:
+                    <label for="name" id="name-label"> Name:
                         <input type="text" id="name" class="name" placeholder="Enter your name" required>
                     </label>
-                    <label for="email"> Email:
+                    <label for="email" id="email-label"> Email:
                         <input type="email" id="email" class="email" name="email" placeholder="Enter your email"
                             required>
                     </label>
-                    <label for="age"> Age
-                        <input type="number" id="age" class="age" name="age" placeholder="Age" min="18" max="90" required>
+                    <label for="age" id="number-label"> Age
+                        <input type="number" id="number" class="age" name="age" placeholder="Age" min="18" max="90" step="1" required>
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Which option best describes your current role?</legend>
-                    <label for="role">
-                        <select id="role" name="role">
+                    <label>
+                        <select id="dropdown" name="role" required>
                             <option value="" selected disabled>Select One</option>
                             <option value="1">Student</option>
                             <option value="2">Full Time Job</option>
@@ -49,75 +49,73 @@
 
                 <fieldset>
                     <legend>Would you recommend FreeCodeCamp</legend>
-                    <label for="definitely"> Definitely
-                        <input type="radio" id="definitely" name="recomend" value="definitely"> 
+                    <label> 
+                        <input type="radio" class="inline" name="recommend" value="definitely"> Definitely
                     </label>
-                    <label for="maybe"> Maybe
-                        <input type="radio" id="maybe" name="recomend" value="maybe"> 
+                    <label> 
+                        <input type="radio" class="inline" name="recommend" value="maybe"> Maybe
                     </label>
-                    <label for="definitely"> Not Sure
-                        <input type="radio" id="notsure" name="recomend" value="notsure"> 
+                    <label> 
+                        <input type="radio" class="inline" name="recommend" value="notsure"> Not Sure
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>What is your favorite feature of FreeCodeCamp?</legend>
-                    <label for="feature">
-                        <select id="feature">
-                            <option value="4" selected disabled>Select an option</option>
-                            <option value="">Challenges</option>
-                            <option value="1">Projects</option>
-                            <option value="2">Community</option>
-                            <option value="3">Open Source</option>
+                    <label>
+                        <select id="feature" name="feature" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="1">Challenges</option>
+                            <option value="2">Projects</option>
+                            <option value="3">Community</option>
+                            <option value="4">Open Source</option>
                         </select>
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>What would you like to see improved?</legend>
-                    <label for="front"> Front-end Projects
-                        <input type="checkbox" id="" name="" value="">
+                    <label for="frontend"> 
+                        <input type="checkbox" class="inline" id="frontend" name="frontend" value="frontend"> Front-end Projects
                     </label>
-                    <label for=""> Back-end projects
-                        <input type="checkbox" id="front" name="front" value="front">
+                    <label for="backend"> 
+                        <input type="checkbox" class="inline" id="backend" name="backend" value="backend"> Back-end projects
                     </label>
-                    <label for="data"> Data Visualization
-                        <input type="checkbox" id="data" name="data" value="data">
+                    <label for="data"> 
+                        <input type="checkbox" class="inline" id="data" name="data" value="data"> Data Visualization
                     </label>
-                    <label for="challenges"> Challenges
-                        <input type="checkbox" id="challenges" name="challenges" value="challenges">
+                    <label for="challenges"> 
+                        <input type="checkbox" class="inline" id="challenges" name="challenges" value="challenges"> Challenges 
                     </label>
-                    <label for="community"> Open Source Community
-                        <input type="checkbox" id="community" name="community" value="community">
+                    <label for="community"> 
+                        <input type="checkbox" class="inline" id="community" name="community" value="community"> Open Source Community 
                     </label>
-                    <label for="gitter"> Gitter help rooms
-                        <input type="checkbox" id="gitter" name="gitter" value="gitter">
+                    <label for="gitter"> 
+                        <input type="checkbox" class="inline" id="gitter" name="gitter" value="gitter"> Gitter help rooms
                     </label>
-                    <label for="videos"> Videos
-                        <input type="checkbox" id="videos" name="videos" value="videos">
+                    <label for="videos"> 
+                        <input type="checkbox" class="inline" id="videos" name="videos" value="videos"> Videos
                     </label>
-                    <label for="meetups"> City Meetups
-                        <input type="checkbox" id="meetups" name="meetups" value="meetups">
+                    <label for="meetups"> 
+                        <input type="checkbox" class="inline" id="meetups" name="meetups" value="meetups"> City Meetups 
                     </label>
-                    <label for="wiki"> Wiki
-                        <input type="checkbox" id="wiki" name="wiki" value="wiki">
+                    <label for="wiki">    
+                        <input type="checkbox" class="inline" id="wiki" name="wiki" value="wiki"> Wiki 
                     </label>
-                    <label for="forum"> Forum
-                        <input type="checkbox" id="forum" name="forum" value="forum">
+                    <label for="forum">  
+                        <input type="checkbox" class="inline" id="forum" name="forum" value="forum"> Forum 
                     </label>
-                    <label for="courses"> Additional Courses
-                        <input type="checkbox" id="courses" name="courses" value="courses">
+                    <label for="courses"> 
+                        <input type="checkbox" class="inline" id="courses" name="courses" value="courses"> Additional Courses
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Any comments or suggestions?</legend>
-                    <label for="textarea">
-                        <textarea id="comments" name="comments" rows="6" cols="30" placeholder="Enter your comment here..."></textarea>
-                    </label>
+                        <textarea id="comments" name="comments" rows="6" cols="30" placeholder="Enter your comment here..." maxlength="500"></textarea>
                 </fieldset>
             </div>
-            <input type="submit" value="Submit" class="button">
+            <input type="submit" id="submit" value="Submit" class="button">
         </form>
     </main>
     <footer>
